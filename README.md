@@ -78,6 +78,14 @@ Una vez levantado tendrás disponibles:
 | BrowserSync UI | http://localhost:3001 | Panel de control de BrowserSync |
 | Debug remoto (JDWP) | puerto `5005` | Para conectar un debugger desde el IDE |
 
+**Ejemplo de acceso:**
+
+```
+http://localhost:8080/formulario
+```
+
+> **Nota:** Reemplazá `formulario` por el context path de tu aplicación si es diferente.
+
 ---
 
 ## Flujo de desarrollo
