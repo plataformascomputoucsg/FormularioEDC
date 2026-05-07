@@ -1,0 +1,31 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: formulario-edc-dev
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./src/main/webapp:/opt/tomcat/webapps/ROOT
+      - ./src:/app/src
+    environment:
+      - CATALINA_OPTS=-Djava.security.egd=file:/dev/./urandom -javaagent:/opt/trava-jdk/lib/hotswap/hotswap-agent.jar=autoHotswap=true
+
+  browsersync:
+    image: node:14-alpine
+    container_name: formulario-browsersync
+    command: >
+      sh -c "
+        npm install -g browser-sync@2.29.3 2>/dev/null &&
+        echo 'BrowserSync iniciado con polling (Windows compatible)' &&
+        browser-sync start --config /app/bs-config.js
+      "
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+    volumes:
+      - ./src/main/webapp:/watch
+      - ./bs-config.js:/app/bs-config.js
+    depends_on:
+      - app

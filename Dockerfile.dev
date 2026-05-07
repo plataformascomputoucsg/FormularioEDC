@@ -1,0 +1,63 @@
+# Imagen de desarrollo: Maven + Tomcat en un solo contenedor
+FROM maven:3.6.3-jdk-8
+
+# Instalar Tomcat 8.5
+ENV CATALINA_HOME=/opt/tomcat
+RUN mkdir -p $CATALINA_HOME && \
+    curl -fsSL https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.100/bin/apache-tomcat-8.5.100.tar.gz \
+    | tar xz --strip-components=1 -C $CATALINA_HOME && \
+    rm -rf $CATALINA_HOME/webapps/*
+
+# Instalar inotify-tools para el Hot Reload de Java
+RUN sed -i 's/deb.debian.org/archive.debian.org/g' /etc/apt/sources.list || true && \
+    sed -i 's/security.debian.org/archive.debian.org/g' /etc/apt/sources.list || true && \
+    sed -i '/stretch-updates/d' /etc/apt/sources.list || true && \
+    apt-get update --allow-releaseinfo-change || apt-get update || true && \
+    apt-get install -y inotify-tools wget && rm -rf /var/lib/apt/lists/*
+
+# Descargar e instalar Trava OpenJDK 8 (contiene DCEVM y HotswapAgent preinstalado)
+RUN mkdir -p /opt/trava-jdk && \
+    wget -qO trava.tar.gz "https://github.com/TravaOpenJDK/trava-jdk-8-dcevm/releases/download/dcevm8u282b08/java8-openjdk-dcevm-linux.tar.gz" && \
+    tar xzf trava.tar.gz -C /opt/trava-jdk --strip-components=1 && \
+    rm trava.tar.gz
+
+# Hacer que el sistema use Trava JDK por defecto (incluyendo Maven)
+ENV JAVA_HOME=/opt/trava-jdk
+ENV PATH=$JAVA_HOME/bin:$PATH
+
+# ✅ FIX: Forzar que 'java' del sistema apunte a Trava JDK (sobreescribe el JDK del base image)
+RUN update-alternatives --install /usr/bin/java java /opt/trava-jdk/bin/java 100 --force && \
+    update-alternatives --install /usr/bin/javac javac /opt/trava-jdk/bin/javac 100 --force
+
+WORKDIR /app
+COPY pom.xml .
+RUN mvn dependency:resolve
+
+COPY src ./src
+RUN mvn clean package -DskipTests && \
+    mkdir -p $CATALINA_HOME/webapps/ROOT && \
+    cd $CATALINA_HOME/webapps/ROOT && \
+    jar xf /app/target/formularioEDC.war
+
+# ✅ FIX: Crear hotswap-agent.properties para que HotswapAgent vigile target/classes
+RUN printf "extraClasspath=/app/target/classes\nautoHotswap=true\nlogLevel=INFO\n" \
+    > $CATALINA_HOME/webapps/ROOT/WEB-INF/classes/hotswap-agent.properties
+
+# Guardar clases compiladas y librerías en cache
+RUN mkdir -p /app/build-cache && \
+    cp -r $CATALINA_HOME/webapps/ROOT/WEB-INF/classes /app/build-cache/classes && \
+    cp -r $CATALINA_HOME/webapps/ROOT/WEB-INF/lib /app/build-cache/lib
+
+# ✅ FIX: Activar HotswapAgent como javaagent en Tomcat + puerto de debug remoto
+ENV CATALINA_OPTS="-javaagent:/opt/trava-jdk/lib/hotswap/hotswap-agent.jar \
+    -XX:+AllowEnhancedClassRedefinition \
+    -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005"
+
+# Copiar script de inicio
+COPY dev-entrypoint.sh /app/dev-entrypoint.sh
+RUN chmod +x /app/dev-entrypoint.sh
+
+# ✅ Puerto 5005 expuesto para debug remoto desde IDE
+EXPOSE 8080 5005
+
+ENTRYPOINT ["/app/dev-entrypoint.sh"]

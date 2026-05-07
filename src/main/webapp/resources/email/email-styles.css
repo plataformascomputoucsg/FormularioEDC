@@ -1,0 +1,40 @@
+/* ============================================================
+   Email styles — fallback para clientes modernos (Gmail web,
+   Apple Mail, Thunderbird). Outlook ignora este archivo y usa
+   solo los estilos inline del HTML.
+   ============================================================ */
+
+/* Reset básico */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background-color: #dcdcdc;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+}
+
+/* Responsive — mobile */
+@media only screen and (max-width: 620px) {
+  .email-container { width: 100% !important; }
+
+  .content-td {
+    padding: 35px 25px !important;
+    font-size: 18px !important;
+  }
+
+  .banner-h1  { font-size: 42px !important; }
+  .closing-msg { font-size: 50px !important; }
+
+  .confirm-btn {
+    font-size: 18px !important;
+    padding: 16px 35px !important;
+  }
+
+  .logo-text-td,
+  .footer-text { font-size: 14px !important; }
+
+  .social-link {
+    font-size: 13px !important;
+    padding: 8px 12px !important;
+  }
+}

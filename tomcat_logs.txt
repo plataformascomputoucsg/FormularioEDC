@@ -1,0 +1,53 @@
+Copiando clases compiladas y librerías...
+Iniciando Tomcat...
+12-Mar-2026 16:58:52.526 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.100
+12-Mar-2026 16:58:52.528 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 19 2024 13:54:42 UTC
+12-Mar-2026 16:58:52.528 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.100.0
+12-Mar-2026 16:58:52.528 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+12-Mar-2026 16:58:52.529 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.6.87.2-microsoft-standard-WSL2
+12-Mar-2026 16:58:52.529 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+12-Mar-2026 16:58:52.529 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/local/openjdk-8/jre
+12-Mar-2026 16:58:52.529 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_282-b08
+12-Mar-2026 16:58:52.529 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+12-Mar-2026 16:58:52.529 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /opt/tomcat
+12-Mar-2026 16:58:52.529 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/tomcat
+12-Mar-2026 16:58:52.529 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties
+12-Mar-2026 16:58:52.530 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+12-Mar-2026 16:58:52.530 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+12-Mar-2026 16:58:52.530 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+12-Mar-2026 16:58:52.530 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+12-Mar-2026 16:58:52.530 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+12-Mar-2026 16:58:52.530 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/opt/tomcat
+12-Mar-2026 16:58:52.531 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/tomcat
+12-Mar-2026 16:58:52.531 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/tomcat/temp
+12-Mar-2026 16:58:52.531 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+12-Mar-2026 16:58:52.633 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+12-Mar-2026 16:58:52.670 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 860 ms
+12-Mar-2026 16:58:52.702 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+12-Mar-2026 16:58:52.703 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.100]
+12-Mar-2026 16:58:52.724 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/tomcat/webapps/ROOT]
+12-Mar-2026 16:59:14.573 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+12-Mar-2026 16:59:16.143 INFO [localhost-startStop-1] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization started
+12-Mar-2026 16:59:16.793 INFO [localhost-startStop-1] org.springframework.web.context.support.AnnotationConfigWebApplicationContext.prepareRefresh Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 12 16:59:16 UTC 2026]; root of context hierarchy
+12-Mar-2026 16:59:18.922 INFO [localhost-startStop-1] org.springframework.web.context.support.AnnotationConfigWebApplicationContext.loadBeanDefinitions Registering annotated classes: [class com.miproducto.config.WebConfig]
+12-Mar-2026 16:59:31.837 INFO [localhost-startStop-1] org.springframework.jdbc.datasource.DriverManagerDataSource.setDriverClassName Loaded JDBC driver: oracle.jdbc.OracleDriver
+12-Mar-2026 16:59:38.967 INFO [localhost-startStop-1] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register Mapped "{[/],methods=[GET]}" onto public java.lang.String com.miproducto.controllers.FormularioController.redirigirAlFormulario()
+12-Mar-2026 16:59:38.999 INFO [localhost-startStop-1] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register Mapped "{[/formulario],methods=[GET]}" onto public java.lang.String com.miproducto.controllers.FormularioController.mostrarFormulario(org.springframework.ui.Model)
+12-Mar-2026 16:59:39.000 INFO [localhost-startStop-1] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register Mapped "{[/formulario],methods=[POST]}" onto public java.lang.String com.miproducto.controllers.FormularioController.procesarFormulario(com.miproducto.dto.RegistroDTO,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+12-Mar-2026 16:59:39.000 INFO [localhost-startStop-1] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register Mapped "{[/exito],methods=[GET]}" onto public java.lang.String com.miproducto.controllers.FormularioController.mostrarExito()
+12-Mar-2026 16:59:39.797 INFO [localhost-startStop-1] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+12-Mar-2026 16:59:42.155 INFO [localhost-startStop-1] org.hibernate.validator.internal.util.Version.<clinit> HV000001: Hibernate Validator 5.4.3.Final
+12-Mar-2026 16:59:47.263 INFO [localhost-startStop-1] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 12 16:59:16 UTC 2026]; root of context hierarchy
+12-Mar-2026 16:59:49.959 INFO [localhost-startStop-1] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization completed in 33816 ms
+12-Mar-2026 16:59:49.975 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/tomcat/webapps/ROOT] has finished in [57,250] ms
+12-Mar-2026 16:59:49.978 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+12-Mar-2026 16:59:50.003 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 57640 ms
+---- LLAMANDO A MOSTRAR FORMULARIO ----
+Tamano de la lista devuelta por DAO: 2
+---- LLAMANDO A MOSTRAR FORMULARIO ----
+Tamano de la lista devuelta por DAO: 2
+---- LLAMANDO A MOSTRAR FORMULARIO ----
+Tamano de la lista devuelta por DAO: 2
+12-Mar-2026 17:02:20.334 WARNING [http-nio-8080-exec-6] org.springframework.web.servlet.PageNotFound.noHandlerFound No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'dispatcher'
+---- LLAMANDO A MOSTRAR FORMULARIO ----
+Tamano de la lista devuelta por DAO: 2

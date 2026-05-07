@@ -1,0 +1,81 @@
+Preparando webapp...
+Iniciando Tomcat en modo foreground...
+HOTSWAP AGENT: 15:55:21.718 INFO (org.hotswap.agent.HotswapAgent) - Loading Hotswap agent {1.4.1} - unlimited runtime class redefinition.
+HOTSWAP AGENT: 15:55:22.135 INFO (org.hotswap.agent.config.PluginRegistry) - Plugin 'org.hotswap.agent.plugin.hotswapper.HotswapperPlugin' initialized in ClassLoader 'sun.misc.Launcher$AppClassLoader@18b4aac2'.
+HOTSWAP AGENT: 15:55:22.281 INFO (org.hotswap.agent.config.PluginRegistry) - Discovered plugins: [JdkPlugin, Hotswapper, WatchResources, ClassInitPlugin, AnonymousClassPatch, Hibernate, Hibernate3JPA, Hibernate3, Spring, Jersey1, Jersey2, Jetty, Tomcat, ZK, Logback, Log4j2, MyFaces, Mojarra, Omnifaces, ELResolver, WildFlyELResolver, OsgiEquinox, Owb, Proxy, WebObjects, Weld, JBossModules, ResteasyRegistry, Deltaspike, GlassFish, Vaadin, Wicket, CxfJAXRS, FreeMarker, Undertow, MyBatis]
+HOTSWAP AGENT: 15:55:22.704 INFO (org.hotswap.agent.config.PluginRegistry) - Plugin 'org.hotswap.agent.plugin.hotswapper.HotswapperPlugin' initialized in ClassLoader 'java.net.URLClassLoader@3224f60b'.
+HOTSWAP AGENT: 15:55:24.484 INFO (org.hotswap.agent.config.PluginRegistry) - Plugin 'org.hotswap.agent.plugin.hotswapper.HotswapperPlugin' initialized in ClassLoader 'ParallelWebappClassLoader
+  context: ROOT
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@3224f60b
+'.
+HOTSWAP AGENT: 15:55:24.484 INFO (org.hotswap.agent.config.PluginRegistry) - Plugin 'org.hotswap.agent.plugin.tomcat.TomcatPlugin' initialized in ClassLoader 'ParallelWebappClassLoader
+  context: ROOT
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@3224f60b
+'.
+HOTSWAP AGENT: 15:55:24.484 INFO (org.hotswap.agent.plugin.tomcat.TomcatPlugin) - Tomcat plugin initialized - Tomcat version '8.5.100.0'
+HOTSWAP AGENT: 15:55:58.790 INFO (org.hotswap.agent.config.PluginRegistry) - Plugin 'org.hotswap.agent.plugin.spring.SpringPlugin' initialized in ClassLoader 'ParallelWebappClassLoader
+  context: ROOT
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@3224f60b
+'.
+HOTSWAP AGENT: 15:55:58.792 INFO (org.hotswap.agent.plugin.spring.SpringPlugin) - Spring plugin initialized - Spring core version '4.3.30.RELEASE'
+HOTSWAP AGENT: 15:56:03.599 INFO (org.hotswap.agent.plugin.spring.SpringPlugin) - Registering basePackage com.miproducto
+HOTSWAP AGENT: 15:56:27.100 INFO (org.hotswap.agent.config.PluginRegistry) - Plugin 'org.hotswap.agent.plugin.hibernate.HibernatePlugin' initialized in ClassLoader 'ParallelWebappClassLoader
+  context: ROOT
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@3224f60b
+'.
+Tamano de la lista devuelta por DAO (Tipo Identificacion): 2
+HOTSWAP AGENT: 16:12:50.143 INFO (org.hotswap.agent.plugin.elresolver.ELResolverPlugin) - ELResolver plugin initialized.
+HOTSWAP AGENT: 16:12:50.143 INFO (org.hotswap.agent.config.PluginRegistry) - Plugin 'org.hotswap.agent.plugin.elresolver.ELResolverPlugin' initialized in ClassLoader 'java.net.URLClassLoader@3224f60b'.
+HOTSWAP AGENT: 16:12:53.332 INFO (org.hotswap.agent.config.PluginRegistry) - Plugin 'org.hotswap.agent.plugin.hotswapper.HotswapperPlugin' initialized in ClassLoader 'org.apache.jasper.servlet.JasperLoader@52f5bcbb'.
+Tamano de la lista devuelta por DAO (Tipo Identificacion): 2
+Tamano de la lista devuelta por DAO (Tipo Identificacion): 2
+Tamano de la lista devuelta por DAO (Tipo Identificacion): 2
+Tamano de la lista devuelta por DAO (Tipo Identificacion): 2
+HOTSWAP AGENT: 16:17:41.488 INFO (org.hotswap.agent.plugin.spring.SpringPlugin) - Spring plugin initialized - Spring core version '4.3.30.RELEASE'
+Preparando webapp...
+Iniciando Tomcat en modo foreground...
+HOTSWAP AGENT: 16:19:14.086 INFO (org.hotswap.agent.HotswapAgent) - Loading Hotswap agent {1.4.1} - unlimited runtime class redefinition.
+HOTSWAP AGENT: 16:19:14.672 INFO (org.hotswap.agent.config.PluginRegistry) - Plugin 'org.hotswap.agent.plugin.hotswapper.HotswapperPlugin' initialized in ClassLoader 'sun.misc.Launcher$AppClassLoader@18b4aac2'.
+HOTSWAP AGENT: 16:19:14.833 INFO (org.hotswap.agent.config.PluginRegistry) - Discovered plugins: [JdkPlugin, Hotswapper, WatchResources, ClassInitPlugin, AnonymousClassPatch, Hibernate, Hibernate3JPA, Hibernate3, Spring, Jersey1, Jersey2, Jetty, Tomcat, ZK, Logback, Log4j2, MyFaces, Mojarra, Omnifaces, ELResolver, WildFlyELResolver, OsgiEquinox, Owb, Proxy, WebObjects, Weld, JBossModules, ResteasyRegistry, Deltaspike, GlassFish, Vaadin, Wicket, CxfJAXRS, FreeMarker, Undertow, MyBatis]
+HOTSWAP AGENT: 16:19:15.411 INFO (org.hotswap.agent.config.PluginRegistry) - Plugin 'org.hotswap.agent.plugin.hotswapper.HotswapperPlugin' initialized in ClassLoader 'java.net.URLClassLoader@3224f60b'.
+HOTSWAP AGENT: 16:19:18.279 INFO (org.hotswap.agent.config.PluginRegistry) - Plugin 'org.hotswap.agent.plugin.hotswapper.HotswapperPlugin' initialized in ClassLoader 'ParallelWebappClassLoader
+  context: ROOT
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@3224f60b
+'.
+HOTSWAP AGENT: 16:19:18.280 INFO (org.hotswap.agent.config.PluginRegistry) - Plugin 'org.hotswap.agent.plugin.tomcat.TomcatPlugin' initialized in ClassLoader 'ParallelWebappClassLoader
+  context: ROOT
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@3224f60b
+'.
+HOTSWAP AGENT: 16:19:18.280 INFO (org.hotswap.agent.plugin.tomcat.TomcatPlugin) - Tomcat plugin initialized - Tomcat version '8.5.100.0'
+HOTSWAP AGENT: 16:20:04.237 INFO (org.hotswap.agent.config.PluginRegistry) - Plugin 'org.hotswap.agent.plugin.spring.SpringPlugin' initialized in ClassLoader 'ParallelWebappClassLoader
+  context: ROOT
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@3224f60b
+'.
+HOTSWAP AGENT: 16:20:04.239 INFO (org.hotswap.agent.plugin.spring.SpringPlugin) - Spring plugin initialized - Spring core version '4.3.30.RELEASE'
+HOTSWAP AGENT: 16:20:09.845 INFO (org.hotswap.agent.plugin.spring.SpringPlugin) - Registering basePackage com.miproducto
+HOTSWAP AGENT: 16:20:39.779 INFO (org.hotswap.agent.config.PluginRegistry) - Plugin 'org.hotswap.agent.plugin.hibernate.HibernatePlugin' initialized in ClassLoader 'ParallelWebappClassLoader
+  context: ROOT
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@3224f60b
+'.
+Tamano de la lista devuelta por DAO (Tipo Identificacion): 2
+HOTSWAP AGENT: 16:21:03.074 INFO (org.hotswap.agent.plugin.elresolver.ELResolverPlugin) - ELResolver plugin initialized.
+HOTSWAP AGENT: 16:21:03.074 INFO (org.hotswap.agent.config.PluginRegistry) - Plugin 'org.hotswap.agent.plugin.elresolver.ELResolverPlugin' initialized in ClassLoader 'java.net.URLClassLoader@3224f60b'.
+HOTSWAP AGENT: 16:21:03.955 INFO (org.hotswap.agent.config.PluginRegistry) - Plugin 'org.hotswap.agent.plugin.hotswapper.HotswapperPlugin' initialized in ClassLoader 'org.apache.jasper.servlet.JasperLoader@5f955e7f'.
+HOTSWAP AGENT: 16:21:07.456 INFO (org.hotswap.agent.config.PluginRegistry) - Plugin 'org.hotswap.agent.plugin.hotswapper.HotswapperPlugin' initialized in ClassLoader 'org.apache.jasper.servlet.JasperLoader@391c8b0'.
+Tamano de la lista devuelta por DAO (Tipo Identificacion): 2

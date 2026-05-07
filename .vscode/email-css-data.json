@@ -1,0 +1,25 @@
+{
+  "version": 1.1,
+  "properties": [
+    {
+      "name": "mso-table-lspace",
+      "description": "Outlook/MSO: removes left-side ghost spacing on table cells.",
+      "browsers": ["IE"]
+    },
+    {
+      "name": "mso-table-rspace",
+      "description": "Outlook/MSO: removes right-side ghost spacing on table cells.",
+      "browsers": ["IE"]
+    },
+    {
+      "name": "mso-line-height-rule",
+      "description": "Outlook/MSO: controls line-height calculation rule.",
+      "browsers": ["IE"]
+    },
+    {
+      "name": "-ms-interpolation-mode",
+      "description": "IE/Outlook: controls image scaling interpolation.",
+      "browsers": ["IE"]
+    }
+  ]
+}

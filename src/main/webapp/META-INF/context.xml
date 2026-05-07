@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context reloadable="false">
+    <!-- HotswapAgent ahora se encargará de inyectar clases sin reiniciar el contexto -->
+</Context>

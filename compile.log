@@ -1,0 +1,36 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.miproducto:formularioEDC >--------------------
+[INFO] Building Formulario EDC 1.0-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ formularioEDC ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ formularioEDC ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 10 source files to /app/target/classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /app/src/main/java/com/miproducto/controllers/FormularioController.java:[116,43] package com.fasterxml.jackson.databind does not exist
+[ERROR] /app/src/main/java/com/miproducto/controllers/FormularioController.java:[116,100] package com.fasterxml.jackson.databind does not exist
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.413 s
+[INFO] Finished at: 2026-03-13T15:07:39Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:compile (default-compile) on project formularioEDC: Compilation failure: Compilation failure: 
+[ERROR] /app/src/main/java/com/miproducto/controllers/FormularioController.java:[116,43] package com.fasterxml.jackson.databind does not exist
+[ERROR] /app/src/main/java/com/miproducto/controllers/FormularioController.java:[116,100] package com.fasterxml.jackson.databind does not exist
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
